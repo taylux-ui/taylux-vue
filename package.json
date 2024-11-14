@@ -1,0 +1,47 @@
+{
+    "name": "@taylux/vue",
+    "private": false,
+    "version": "0.0.0",
+    "type": "module",
+    "main": "./dist/taylux.umd.js",
+    "module": "./dist/taylux.es.js",
+    "types": "./dist/types/ui/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/taylux.es.js",
+            "require": "./dist/taylux.umd.js",
+            "types": "./dist/types/ui/index.d.ts"
+        },
+        "./style.css": {
+            "import": "./dist/assets/style.css",
+            "require": "./dist/assets/style.css"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc -b && vite build",
+        "preview": "vite preview",
+        "clean": "rm -rf dist"
+    },
+    "dependencies": {
+        "terser": "^5.36.0",
+        "vite-plugin-dts": "^4.3.0",
+        "vue": "^3.5.12"
+    },
+    "devDependencies": {
+        "@types/node": "^22.9.0",
+        "@typescript-eslint/parser": "^8.14.0",
+        "@vitejs/plugin-vue": "^5.1.4",
+        "eslint": "^9.14.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-vue": "^9.31.0",
+        "prettier": "^3.3.3",
+        "typescript": "~5.6.2",
+        "vite": "^5.4.10",
+        "vue-tsc": "^2.1.8"
+    }
+}

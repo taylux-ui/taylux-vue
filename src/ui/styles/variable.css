@@ -1,0 +1,12 @@
+:root {
+    /* Colors */
+    --taylux-primary: #2563eb;
+    --taylux-primary-hover: #1d4ed8;
+    --taylux-secondary: #f3f4f6;
+    --taylux-secondary-hover: #e5e7eb;
+
+    /* Sizes */
+    --taylux-size-sm: 32px;
+    --taylux-size-md: 40px;
+    --taylux-size-lg: 48px;
+}
