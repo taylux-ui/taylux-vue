@@ -1,7 +1,7 @@
 export interface ButtonProps {
-    size?: 'small' | 'medium' | 'large';
-    variant?: 'primary' | 'secondary' | 'outline';
+    size?: 'sm' | 'md' | 'lg';
+    variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
     disabled?: boolean;
 }
-export const BUTTON_SIZES = ['small', 'medium', 'large'] as const;
-export const BUTTON_VARIANTS = ['primary', 'secondary', 'outline'] as const;
+export const BUTTON_SIZES = ['sm', 'md', 'lg'] as const;
+export const BUTTON_VARIANTS = ['primary', 'secondary', 'outline', 'ghost', 'danger'] as const;
