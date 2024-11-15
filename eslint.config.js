@@ -5,6 +5,18 @@ import pluginVue from 'eslint-plugin-vue';
 
 export default [
     {
+        ignores: [
+            'dist/**',
+            'node_modules/**',
+            'coverage/**',
+            '.vscode/**',
+            '.idea/**',
+            '*.config.js',
+            'public/**',
+            'build/**',
+        ],
+    },
+    {
         files: ['**/*.vue'],
         languageOptions: {
             parser: import('vue-eslint-parser'),

@@ -1,5 +1,5 @@
 import type { App } from 'vue';
-import Button from './components/TayluxButton.vue';
+import Button from './components/Button/TayluxButton.vue';
 import './styles/components/Button/button.css';
 import './styles/index.css';
 
