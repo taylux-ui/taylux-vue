@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Button from './demo/Buttons/Button.vue';
+import ButtonVue from './demo/Buttons/ButtonVue.vue';
 </script>
 
 <template>
-    <Button />
+    <ButtonVue />
 </template>
 
 <style scoped></style>
