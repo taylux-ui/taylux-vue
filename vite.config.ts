@@ -16,7 +16,7 @@ export default defineConfig({
         lib: {
             entry: resolve(__dirname, 'src/ui/index.ts'),
             name: 'taylux',
-            fileName: format => `taylux.${format}.js`,
+            fileName: (format) => `taylux.${format}.js`,
         },
         rollupOptions: {
             external: ['vue'],
@@ -30,14 +30,6 @@ export default defineConfig({
                     },
                     assetFileNames: 'assets/[name][extname]',
                     preserveModulesRoot: 'src',
-                },
-                {
-                    format: 'cjs',
-                    exports: 'named',
-                    globals: {
-                        vue: 'Vue',
-                    },
-                    assetFileNames: 'assets/[name][extname]',
                 },
                 {
                     format: 'umd',
@@ -60,8 +52,5 @@ export default defineConfig({
         },
         reportCompressedSize: true,
         chunkSizeWarningLimit: 1000,
-    },
-    optimizeDeps: {
-        exclude: ['vue'],
     },
 });
