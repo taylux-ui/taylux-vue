@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import type { ButtonProps } from '../../types/index.ts';
+import type { ButtonProps } from '../../types/Button/button.ts';
 
 const props = withDefaults(defineProps<ButtonProps>(), {
     size: 'md',

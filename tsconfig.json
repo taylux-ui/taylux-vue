@@ -5,11 +5,11 @@
         "outDir": "dist",
         "jsx": "preserve",
         "composite": true,
-        "types": ["node", "vite/client", "vue"],
+        "types": ["node", "vite/client", "vue", "vitest/globals", "@testing-library/jest-dom"],
         "baseUrl": ".",
         "paths": {
             "@/*": ["src/*"]
         }
     },
-    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue", "types/**/*.d.ts"]
 }

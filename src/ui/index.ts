@@ -1,15 +1,18 @@
 import type { App } from 'vue';
-import Button from './components/Button/TayluxButton.vue';
+import TayluxButton from './components/Button/TayluxButton.vue';
+import TayluxInput from './components/Input/TayluxInput.vue';
 import './styles/components/Button/button.css';
 import './styles/index.css';
 
-export { Button };
+export { TayluxButton, TayluxInput };
 
-export type { ButtonProps } from './types/index';
+export type { ButtonProps } from './types/Button/button';
+export type { InputProps } from './types/Input/input';
 
 export const plugin = {
     install(app: App) {
-        app.component('TayluxButton', Button);
+        app.component('TayluxButton', TayluxButton);
+        app.component('TayluxInput', TayluxInput);
     },
 };
 
@@ -17,6 +20,7 @@ export default plugin;
 
 declare module '@vue/runtime-core' {
     export interface GlobalComponents {
-        TayluxButton: typeof Button;
+        TayluxButton: typeof TayluxButton;
+        TayluxInput: typeof TayluxInput;
     }
 }
