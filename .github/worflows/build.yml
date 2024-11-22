@@ -1,39 +1,39 @@
 name: Build and Release
 
 on:
-    push:
-        branches: ['dev']
+  push:
+    branches: ["dev"]
 
 jobs:
-    build-and-release:
-        runs-on: ubuntu-latest
-        outputs:
-            version: ${{ steps.get_version.outputs.version }}
+  build-and-release:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.get_version.outputs.version }}
 
-        steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-            - run: npm ci
+      - run: npm ci
 
-            # Validation et build
-            - run: npm run validate
-            - run: npm run build
+      # Validation et build
+      - run: npm run validate
+      - run: npm run build
 
-            # Récupérer la version
-            - name: Get version
-              id: get_version
-              run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+      # Récupérer la version
+      - name: Get version
+        id: get_version
+        run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
 
-            # Créer release et tag
-            - name: Create Release
-              uses: actions/create-release@v1
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              with:
-                  tag_name: v${{ steps.get_version.outputs.version }}
-                  release_name: Release v${{ steps.get_version.outputs.version }}
-                  draft: false
-                  prerelease: false
+      # Créer release et tag
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.get_version.outputs.version }}
+          release_name: Release v${{ steps.get_version.outputs.version }}
+          draft: false
+          prerelease: false
