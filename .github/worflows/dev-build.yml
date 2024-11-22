@@ -1,0 +1,11 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - dev
+    paths: ./github/workflows/dev-build.yml
+  pull_requst:
+    branches:
+      - main
+    paths: ./github/workflows/main.build.yml
