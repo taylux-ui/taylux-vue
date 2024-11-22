@@ -14,6 +14,7 @@ export default [
             '*.config.js',
             'public/**',
             'build/**',
+            '.github/worflows/publish.yml',
         ],
     },
     {
