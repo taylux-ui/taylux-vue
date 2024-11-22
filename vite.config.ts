@@ -27,7 +27,6 @@ export default defineConfig(({ command, mode }) => ({
             entry: resolve(__dirname, 'src/ui/index.ts'),
             name: 'taylux',
             fileName: (format) => `taylux.${format}.js`,
-            fileName: (format) => `taylux.${format}.js`,
         },
         minify: command === 'build' ? 'terser' : false,
         cssCodeSplit: false,
