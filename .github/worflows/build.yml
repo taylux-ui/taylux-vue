@@ -2,7 +2,8 @@ name: Build and Release
 
 on:
   push:
-    branches: ["dev"]
+    branches:
+      - dev
 
 jobs:
   build-and-release:
