@@ -1,13 +1,12 @@
-/* Button.css */
 .taylux-btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: var(--taylux-radius);
     font-weight: 500;
     cursor: pointer;
     transition: all 300ms ease-in-out;
-    border: none;
+    gap: 15px;
 }
 
 /* Variant colors */

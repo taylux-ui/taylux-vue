@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { InputProps } from '../../types/Input/input.js';
+import type { InputProps } from './types/input.js';
 
 const props = withDefaults(defineProps<InputProps>(), {
     type: 'text',

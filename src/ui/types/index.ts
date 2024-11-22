@@ -1,2 +1,2 @@
-import './Button/button';
-import './Input/input';
+import '@/components/Button/types/button';
+import '@/components/Input/types/input';

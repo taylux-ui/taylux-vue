@@ -1,9 +1,7 @@
 import { fireEvent, render } from '@testing-library/vue';
 import { describe, expect, it } from 'vitest';
-import type { ButtonProps } from '../../types/index';
-import TayluxButton from './TayluxButton.vue';
-
-type ButtonVariant = ButtonProps['variant'];
+import TayluxButton from '../TayluxButton.vue';
+import type { ButtonProps } from '../types/button';
 
 describe('TayluxButton', () => {
     it('renders button with default props', () => {

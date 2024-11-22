@@ -1,8 +1,10 @@
 import { DefineComponent } from 'vue';
-import type { ButtonProps } from './Button/button';
+import type { ButtonProps } from '../components/Button/types/button';
+import type { InputProps } from '../components/Input/types/input';
 
 declare module 'taylux' {
     export const TayluxButton: DefineComponent<ButtonProps, {}, {}>;
+    export const TayluxInput: DefineComponent<InputProps, {}, {}>;
 }
 
 interface CustomMatchers<R = unknown> {

@@ -1,13 +1,13 @@
+import '@/components/Button/style/button.css';
+import TayluxButton from '@/components/Button/TayluxButton.vue';
+import TayluxInput from '@/components/Input/TayluxInput.vue';
 import type { App } from 'vue';
-import TayluxButton from './components/Button/TayluxButton.vue';
-import TayluxInput from './components/Input/TayluxInput.vue';
-import './styles/components/Button/button.css';
 import './styles/index.css';
 
 export { TayluxButton, TayluxInput };
 
-export type { ButtonProps } from './types/Button/button';
-export type { InputProps } from './types/Input/input';
+export type { ButtonProps } from '@/components/Button/types/button';
+export type { InputProps } from '@/components/Input/types/input';
 
 export const plugin = {
     install(app: App) {
