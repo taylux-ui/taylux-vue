@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import Button from './demo/Buttons/Button.vue';
+import ButtonVue from './demo/Buttons/ButtonVue.vue';
+import InputVue from './demo/Input/InputVue.vue';
 </script>
 
 <template>
-    <Button />
+    <ButtonVue />
+    <InputVue />
 </template>
 
 <style scoped></style>

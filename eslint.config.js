@@ -5,15 +5,34 @@ import pluginVue from 'eslint-plugin-vue';
 
 export default [
     {
-        files: ['**/*vue'],
-        languagesOptions: {
-            parser: pluginVue.parserServices.getParser('snapshot'),
+        ignores: [
+            'dist/**',
+            'node_modules/**',
+            'coverage/**',
+            '.vscode/**',
+            '.idea/**',
+            '*.config.js',
+            'public/**',
+            'build/**',
+        ],
+    },
+    {
+        files: ['**/*.vue'],
+        languageOptions: {
+            parser: import('vue-eslint-parser'),
             parserOptions: {
-                parser: tsParser,
+                parser: {
+                    ts: tsParser,
+                    tsx: tsParser,
+                    js: tsParser,
+                },
                 extraFileExtensions: ['.vue'],
                 ecmaVersion: 'latest',
                 sourceType: 'module',
             },
+        },
+        plugins: {
+            vue: pluginVue,
         },
     },
     ...pluginVue.configs['flat/recommended'],
