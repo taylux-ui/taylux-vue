@@ -1,23 +1,11 @@
 name: Build and Test
 
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: "Environment to deploy to"
-        required: true
-        default: "staging"
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Run Build
-        run: echo "Building the project..."
-
-      - name: Run Tests
-        run: echo "Running tests..."
+  push:
+    branches:
+      - dev
+    paths: ./github/workflows/dev-build.yml
+  pull_requst:
+    branches:
+      - main
+    paths: ./github/workflows/main.build.yml
