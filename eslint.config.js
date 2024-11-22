@@ -14,7 +14,7 @@ export default [
             '*.config.js',
             'public/**',
             'build/**',
-            '.github/workflows/build.yml',
+            '.github/**/*.yml',
         ],
     },
     {
